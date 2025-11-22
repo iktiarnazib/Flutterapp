@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.green,
@@ -92,10 +92,10 @@ class _HomePageState extends State<HomePage> {
       //   ),
       // ),
       body: clientSelection == 0
-          ? Center(child: Text("This is where we will experiment page 1"))
+          ? Center(child: Text("This is page 1"))
           : clientSelection == 1
-          ? Center(child: Text("This is where we will experiment page 2"))
-          : Center(child: Text("This is page where we will experiment 3")),
+          ? Center(child: Text("This is page 2"))
+          : Center(child: Text("This is page 3")),
       bottomNavigationBar: NavigationBar(
         destinations: [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
