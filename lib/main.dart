@@ -97,7 +97,11 @@ class _HomePageState extends State<HomePage> {
           ? Center(child: Text("This is page 2"))
           : Center(child: Text("This is page 3")),
       bottomNavigationBar: NavigationBar(
-        destinations: [],
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.work), label: 'Work'),
+          NavigationDestination(icon: Icon(Icons.work), label: 'Work'),
+        ],
         onDestinationSelected: (int value) {
           setState(() {
             clientSelection = value;
